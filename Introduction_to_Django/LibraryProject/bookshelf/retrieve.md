@@ -1,7 +1,7 @@
-Book.objects.get(id=2)
+book = Book.objects.get(id=2)
 // <Book: Book object (2)>
 
-Book.__dict__
+book.__dict__
 //{'_state': <django.db.models.base.ModelState at 0x7f11f1385b50>,
  'id': 2,
  'title': '1984',
