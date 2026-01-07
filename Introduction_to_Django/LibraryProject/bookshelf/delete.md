@@ -6,4 +6,4 @@ book.delete()
 
 Book.objects.filter(id=2).exists()
 
-// False
+<!--Expected Output: False -->

@@ -6,4 +6,4 @@ Book.objects.create(
     publication_year=1949
 )
 
-// <Book: Book object (2)>
+<!-- Expected Output: <Book: Book object (2)> -->
