@@ -31,6 +31,6 @@ def list_all_books(library_name):
 def retrieve_all_librarian_for_a_library(library_name):
     """ Retrieve all librarian for a library."""
     library = Library.objects.get(library=library_name)
-    librarian = library.librarian
+    librarian = Librarian.objects.get(library=library_name)
     
     print(f"The librarian is {librarian.name}")
