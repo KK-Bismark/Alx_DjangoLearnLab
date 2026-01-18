@@ -9,10 +9,10 @@ from relationship_app.models import Author, Book, Library, Librarian
 
 
 
-def query_books_by_author(author_name):
+def query_books_by_author(author):
     """ Query all books by a specific author."""
 
-    author = Author.objects.get(name=author_name)
+    author = Author.objects.get(name=author)
     books = author.books.all()
     
     for book in books:
@@ -20,8 +20,17 @@ def query_books_by_author(author_name):
 
 
 def list_all_books(library_name):
+    """List all books in a library."""
     library = Library.objects.get(name=library_name)
     books = library.books.all()
 
     for book in books:
         print("f{book.title")
+
+
+def retrieve_all_librarian_for_a_library(library_name):
+    """ Retrieve all librarian for a library."""
+    library = Library.objects.get(name=library_name)
+    librarian = library.librarian
+    
+    print(f"The librarian is {librarian.name}")
